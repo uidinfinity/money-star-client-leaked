@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "money-star-leaked",
+  "version": "${version}",
+  "name": "money-star-leaked",
+  "description": "nadpis na kurtochke pizda и еще феткет лох ебаный",
+  "authors": [
+    "F3tcat1337 лох ебаный",
+    "F3i4ik лох ебаный",
+    "F3mb0y1337 лох ебаный",
+    "^ ITS ONE MAN ^ лох ебаный"
+  ],
+  "contact": {
+    "repo": ""
+  },
+  "license": "MIT",
+  "environment": "client",
+  "accessWidener": "money-star.accesswidener",
+  "entrypoints": {
+    "client": [
+      "me.money.star.MoneyStar"
+    ],
+    "main": [
+      "me.money.star.MoneyStar"
+    ]
+  },
+  "mixins": [
+    "money-star.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
