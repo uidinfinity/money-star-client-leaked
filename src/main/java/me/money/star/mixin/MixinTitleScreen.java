@@ -1,7 +1,5 @@
 package me.money.star.mixin;
 
-
-import me.money.star.BuildConfig;
 import me.money.star.client.modules.client.Colors;
 import me.money.star.util.render.ColorUtil;
 import net.minecraft.client.gui.DrawContext;
@@ -20,6 +18,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import java.util.Date;
 
 /**
  * @author xgraza
@@ -73,9 +73,8 @@ public abstract class MixinTitleScreen extends Screen {
             return;
         }
         context.drawTextWithShadow(client.textRenderer,
-                "Money"+Formatting.WHITE+"-Star"+Formatting.GRAY+" (build: "+BuildConfig.BUILD_TIME+")",
+                "Money"+Formatting.WHITE+"-Star"+Formatting.GRAY+" (build: "+new Date().toString()+")",
                 2, height - (client.textRenderer.fontHeight * 2) - 2, color | i);
-    }
 
 
 /*
@@ -93,4 +92,5 @@ public abstract class MixinTitleScreen extends Screen {
     }
 
  */
+}
 }
